@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.game.states.GameStateManager;
+import com.mygdx.game.states.MenuState;
 
 public class FlappyDemo extends ApplicationAdapter {
 	//public static final int WIDTH = 480;
@@ -22,6 +23,7 @@ public class FlappyDemo extends ApplicationAdapter {
 		batch = new SpriteBatch();
 		gsm = new GameStateManager();
 		Gdx.gl.glClearColor(1, 0, 0, 1);
+		gsm.push(new MenuState(gsm));
 		//img = new Texture("badlogic.jpg");
 	}
 
